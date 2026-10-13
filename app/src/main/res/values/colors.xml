@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- ── Brand colours ───────────────────────────────────── -->
+    <!-- Deep navy – used as primary background -->
+    <color name="colorBackground">#0A0E27</color>
+    <!-- Vibrant blue – primary accent / buttons -->
+    <color name="colorAccent">#2979FF</color>
+    <!-- Lighter blue for secondary accents -->
+    <color name="colorAccentLight">#5C9EFF</color>
+    <!-- Cyan used in logo "ify" text -->
+    <color name="colorCyan">#00D4FF</color>
+
+    <!-- ── Neon Blue Theme ─────────────────────────────────── -->
+    <color name="colorNeonBlue">#00E5FF</color>
+    <color name="colorNeonBlueLight">#80F4FF</color>
+    <color name="colorNeonBlueDark">#00B0FF</color>
+    <color name="colorNeonBlueGlow">#3300E5FF</color>
+    <color name="colorNeonBlueBg">#070C20</color>
+    <color name="colorNeonCard">#0D1739</color>
+    <color name="colorNeonStroke">#00E5FF</color>
+    <color name="colorNeonHint">#4DD0E1</color>
+
+    <!-- ── Interactive Neon Palette ───────────────────────── -->
+    <color name="colorNeonGreen">#00FF66</color>
+    <color name="colorNeonGreenGlow">#2600FF66</color>
+    <color name="colorNeonYellow">#FFE600</color>
+    <color name="colorNeonYellowGlow">#26FFE600</color>
+    <color name="colorNeonOrange">#FF9100</color>
+    <color name="colorNeonOrangeGlow">#26FF9100</color>
+    <color name="colorNeonPink">#FF007F</color>
+    <color name="colorNeonPurple">#B537F2</color>
+
+    <!-- ── Surface colours ─────────────────────────────────── -->
+    <color name="colorSurface">#0F1535</color>
+    <color name="colorSurface2">#151D45</color>
+    <color name="colorOnSurface">#E8EAF6</color>
+    <color name="colorOnSurfaceVariant">#9FA8DA</color>
+
+    <!-- ── Status / System bar ────────────────────────────── -->
+    <color name="colorPrimary">#0D1B4B</color>
+    <color name="colorPrimaryVariant">#0A0E27</color>
+    <color name="colorOnPrimary">#FFFFFF</color>
+    <color name="colorSecondary">#2979FF</color>
+    <color name="colorOnSecondary">#FFFFFF</color>
+
+    <!-- ── Class state colours ────────────────────────────── -->
+    <!-- Current class card background (blue-tinted) -->
+    <color name="colorCurrentClass">#0D2461</color>
+    <!-- Exam card background (orange-tinted) -->
+    <color name="colorExamCard">#2A1500</color>
+    <!-- Completed class green -->
+    <color name="colorCompleted">#4CAF50</color>
+    <!-- Holiday gold -->
+    <color name="colorHoliday">#FFB74D</color>
+
+    <!-- ── Widget ──────────────────────────────────────────── -->
+    <color name="colorWidgetBg">#0F1535</color>
+    <color name="colorWidgetText">#E8EAF6</color>
+
+</resources>

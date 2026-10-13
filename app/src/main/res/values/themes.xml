@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--
+        Base application theme with Neon Aesthetic.
+        Vibrant Neon Cyan/Blue highlights, deep space navy background,
+        and glowing neon text box outlines.
+    -->
+    <style name="Theme.UMSify" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/colorNeonBlue</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryVariant</item>
+        <item name="colorOnPrimary">#070C20</item>
+        <item name="colorSecondary">@color/colorNeonBlue</item>
+        <item name="colorOnSecondary">#070C20</item>
+        <item name="android:statusBarColor">@color/colorBackground</item>
+        <item name="android:navigationBarColor">@color/colorBackground</item>
+        <item name="android:windowBackground">@color/colorBackground</item>
+
+        <!-- Global Neon Text Box & Input Styles -->
+        <item name="textInputStyle">@style/NeonTextInputLayout</item>
+        <item name="editTextColor">@color/colorNeonBlue</item>
+        <item name="toolbarStyle">@style/NeonToolbar</item>
+    </style>
+
+    <!-- Global Neon Toolbar Style -->
+    <style name="NeonToolbar" parent="Widget.MaterialComponents.Toolbar">
+        <item name="titleTextColor">@color/colorNeonBlue</item>
+        <item name="android:titleTextColor">@color/colorNeonBlue</item>
+        <item name="navigationIconTint">@color/colorNeonBlue</item>
+    </style>
+
+    <!-- Neon Outlined Text Input Style -->
+    <style name="NeonTextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/neon_box_stroke</item>
+        <item name="hintTextColor">@color/colorNeonBlue</item>
+        <item name="android:textColorHint">@color/colorNeonBlueLight</item>
+        <item name="placeholderTextColor">@color/colorNeonBlueLight</item>
+        <item name="startIconTint">@color/colorNeonBlue</item>
+        <item name="endIconTint">@color/colorNeonBlue</item>
+        <item name="boxStrokeWidth">1.5dp</item>
+        <item name="boxStrokeWidthFocused">2dp</item>
+        <item name="boxCornerRadiusTopStart">12dp</item>
+        <item name="boxCornerRadiusTopEnd">12dp</item>
+        <item name="boxCornerRadiusBottomStart">12dp</item>
+        <item name="boxCornerRadiusBottomEnd">12dp</item>
+    </style>
+
+    <!-- Neon Text Input EditText -->
+    <style name="NeonTextInputEditText" parent="Widget.MaterialComponents.TextInputEditText.OutlinedBox">
+        <item name="android:textColor">@color/colorNeonBlue</item>
+        <item name="android:textColorHint">@color/colorNeonHint</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <!--
+        Splash screen theme.
+    -->
+    <style name="Theme.UMSify.Splash" parent="Theme.UMSify">
+        <item name="android:windowBackground">@drawable/bg_splash</item>
+        <item name="android:statusBarColor">#0A0E27</item>
+        <item name="android:navigationBarColor">#0A0E27</item>
+        <item name="android:windowFullscreen">false</item>
+    </style>
+
+</resources>

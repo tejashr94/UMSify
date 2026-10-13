@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    activity_login.xml
+    UMSify Authentication Screen.
+    Sleek Dark Cyber background with Neon Blue accents, neon highlighted text box borders,
+    neon placeholder text, and curved neon switch tab button on top.
+-->
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorNeonBlueBg"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="24dp">
+
+        <!-- Logo + App name header -->
+        <ImageView
+            android:id="@+id/ivAuthLogo"
+            android:layout_width="84dp"
+            android:layout_height="84dp"
+            android:layout_marginTop="32dp"
+            android:src="@drawable/ic_umsify_logo"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitCenter" />
+
+        <TextView
+            android:id="@+id/tvAuthAppName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/app_name"
+            android:textColor="@color/colorNeonBlue"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.06"
+            android:fontFamily="sans-serif-medium" />
+
+        <TextView
+            android:id="@+id/tvAuthTagline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/splash_tagline"
+            android:textColor="@color/colorNeonHint"
+            android:textSize="13sp"
+            android:letterSpacing="0.04" />
+
+        <!-- Switch Tab layout: Login | Sign Up with curved neon border & indicator -->
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/bg_neon_tab_bar"
+            android:padding="3dp"
+            app:tabIndicator="@drawable/bg_tab_indicator_neon"
+            app:tabIndicatorGravity="stretch"
+            app:tabIndicatorAnimationMode="elastic"
+            app:tabTextColor="@color/colorNeonBlueLight"
+            app:tabSelectedTextColor="@color/colorNeonBlue"
+            app:tabRippleColor="@color/colorNeonBlueGlow"
+            style="@style/Widget.MaterialComponents.TabLayout"
+            app:tabGravity="fill"
+            app:tabMode="fixed">
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tab_login" />
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tab_signup" />
+        </com.google.android.material.tabs.TabLayout>
+
+        <!-- ═══════ LOGIN FORM ═══════ -->
+        <LinearLayout
+            android:id="@+id/layoutLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="24dp"
+            android:visibility="visible">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilLoginUsername"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_username"
+                app:boxStrokeColor="@color/neon_box_stroke"
+                app:boxStrokeWidth="1.5dp"
+                app:boxStrokeWidthFocused="2dp"
+                app:boxCornerRadiusTopStart="14dp"
+                app:boxCornerRadiusTopEnd="14dp"
+                app:boxCornerRadiusBottomStart="14dp"
+                app:boxCornerRadiusBottomEnd="14dp"
+                app:hintTextColor="@color/colorNeonBlue"
+                android:textColorHint="@color/colorNeonBlueLight"
+                app:placeholderTextColor="@color/colorNeonBlueLight"
+                app:startIconDrawable="@drawable/ic_person"
+                app:startIconTint="@color/colorNeonBlue">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etLoginUsername"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textNoSuggestions"
+                    android:textColor="@color/colorNeonBlue"
+                    android:textColorHint="@color/colorNeonBlueLight"
+                    android:background="@null"
+                    android:imeOptions="actionNext"
+                    android:singleLine="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilLoginPassword"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="@string/hint_password"
+                app:boxStrokeColor="@color/neon_box_stroke"
+                app:boxStrokeWidth="1.5dp"
+                app:boxStrokeWidthFocused="2dp"
+                app:boxCornerRadiusTopStart="14dp"
+                app:boxCornerRadiusTopEnd="14dp"
+                app:boxCornerRadiusBottomStart="14dp"
+                app:boxCornerRadiusBottomEnd="14dp"
+                app:hintTextColor="@color/colorNeonBlue"
+                android:textColorHint="@color/colorNeonBlueLight"
+                app:placeholderTextColor="@color/colorNeonBlueLight"
+                app:startIconDrawable="@drawable/ic_lock"
+                app:startIconTint="@color/colorNeonBlue"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/colorNeonBlue">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etLoginPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:textColor="@color/colorNeonBlue"
+                    android:textColorHint="@color/colorNeonBlueLight"
+                    android:background="@null"
+                    android:imeOptions="actionDone"
+                    android:singleLine="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tvForgotPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="10dp"
+                android:text="@string/forgot_password"
+                android:textColor="@color/colorNeonBlue"
+                android:textSize="13sp"
+                android:paddingBottom="4dp"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnLogin"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginTop="24dp"
+                android:text="@string/btn_login"
+                android:textColor="#070C20"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:backgroundTint="@color/colorNeonBlue"
+                app:cornerRadius="14dp"
+                style="@style/Widget.MaterialComponents.Button" />
+
+            <TextView
+                android:id="@+id/tvCreateAccount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="@string/create_account"
+                android:textColor="@color/colorNeonBlueLight"
+                android:textSize="14sp"
+                android:clickable="true"
+                android:focusable="true" />
+
+        </LinearLayout>
+
+        <!-- ═══════ SIGN UP FORM ═══════ -->
+        <LinearLayout
+            android:id="@+id/layoutSignup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="24dp"
+            android:visibility="gone">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilSignupName"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_full_name"
+                app:boxStrokeColor="@color/neon_box_stroke"
+                app:boxStrokeWidth="1.5dp"
+                app:boxStrokeWidthFocused="2dp"
+                app:boxCornerRadiusTopStart="14dp"
+                app:boxCornerRadiusTopEnd="14dp"
+                app:boxCornerRadiusBottomStart="14dp"
+                app:boxCornerRadiusBottomEnd="14dp"
+                app:hintTextColor="@color/colorNeonBlue"
+                android:textColorHint="@color/colorNeonBlueLight"
+                app:placeholderTextColor="@color/colorNeonBlueLight"
+                app:startIconDrawable="@drawable/ic_person"
+                app:startIconTint="@color/colorNeonBlue">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etSignupName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName|textCapWords"
+                    android:textColor="@color/colorNeonBlue"
+                    android:textColorHint="@color/colorNeonBlueLight"
+                    android:background="@null"
+                    android:imeOptions="actionNext"
+                    android:singleLine="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilSignupRegNumber"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:hint="@string/hint_reg_number"
+                app:boxStrokeColor="@color/neon_box_stroke"
+                app:boxStrokeWidth="1.5dp"
+                app:boxStrokeWidthFocused="2dp"
+                app:boxCornerRadiusTopStart="14dp"
+                app:boxCornerRadiusTopEnd="14dp"
+                app:boxCornerRadiusBottomStart="14dp"
+                app:boxCornerRadiusBottomEnd="14dp"
+                app:hintTextColor="@color/colorNeonBlue"
+                android:textColorHint="@color/colorNeonBlueLight"
+                app:placeholderTextColor="@color/colorNeonBlueLight"
+                app:startIconDrawable="@drawable/ic_badge"
+                app:startIconTint="@color/colorNeonBlue">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etSignupRegNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:textColor="@color/colorNeonBlue"
+                    android:textColorHint="@color/colorNeonBlueLight"
+                    android:background="@null"
+                    android:imeOptions="actionNext"
+                    android:singleLine="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilSignupUsername"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:hint="@string/hint_username"
+                app:boxStrokeColor="@color/neon_box_stroke"
+                app:boxStrokeWidth="1.5dp"
+                app:boxStrokeWidthFocused="2dp"
+                app:boxCornerRadiusTopStart="14dp"
+                app:boxCornerRadiusTopEnd="14dp"
+                app:boxCornerRadiusBottomStart="14dp"
+                app:boxCornerRadiusBottomEnd="14dp"
+                app:hintTextColor="@color/colorNeonBlue"
+                android:textColorHint="@color/colorNeonBlueLight"
+                app:placeholderTextColor="@color/colorNeonBlueLight"
+                app:startIconDrawable="@drawable/ic_at"
+                app:startIconTint="@color/colorNeonBlue">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etSignupUsername"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textNoSuggestions"
+                    android:textColor="@color/colorNeonBlue"
+                    android:textColorHint="@color/colorNeonBlueLight"
+                    android:background="@null"
+                    android:imeOptions="actionNext"
+                    android:singleLine="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilSignupPassword"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:hint="@string/hint_password"
+                app:boxStrokeColor="@color/neon_box_stroke"
+                app:boxStrokeWidth="1.5dp"
+                app:boxStrokeWidthFocused="2dp"
+                app:boxCornerRadiusTopStart="14dp"
+                app:boxCornerRadiusTopEnd="14dp"
+                app:boxCornerRadiusBottomStart="14dp"
+                app:boxCornerRadiusBottomEnd="14dp"
+                app:hintTextColor="@color/colorNeonBlue"
+                android:textColorHint="@color/colorNeonBlueLight"
+                app:placeholderTextColor="@color/colorNeonBlueLight"
+                app:startIconDrawable="@drawable/ic_lock"
+                app:startIconTint="@color/colorNeonBlue"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/colorNeonBlue">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etSignupPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:textColor="@color/colorNeonBlue"
+                    android:textColorHint="@color/colorNeonBlueLight"
+                    android:background="@null"
+                    android:imeOptions="actionNext"
+                    android:singleLine="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilSignupConfirmPassword"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:hint="@string/hint_confirm_password"
+                app:boxStrokeColor="@color/neon_box_stroke"
+                app:boxStrokeWidth="1.5dp"
+                app:boxStrokeWidthFocused="2dp"
+                app:boxCornerRadiusTopStart="14dp"
+                app:boxCornerRadiusTopEnd="14dp"
+                app:boxCornerRadiusBottomStart="14dp"
+                app:boxCornerRadiusBottomEnd="14dp"
+                app:hintTextColor="@color/colorNeonBlue"
+                android:textColorHint="@color/colorNeonBlueLight"
+                app:placeholderTextColor="@color/colorNeonBlueLight"
+                app:startIconDrawable="@drawable/ic_lock"
+                app:startIconTint="@color/colorNeonBlue"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/colorNeonBlue">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etSignupConfirmPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:textColor="@color/colorNeonBlue"
+                    android:textColorHint="@color/colorNeonBlueLight"
+                    android:background="@null"
+                    android:imeOptions="actionNext"
+                    android:singleLine="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Gender selector -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/label_gender"
+                android:textColor="@color/colorNeonBlueLight"
+                android:textSize="13sp" />
+
+            <RadioGroup
+                android:id="@+id/rgGender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+
+                <RadioButton
+                    android:id="@+id/rbMale"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/gender_male"
+                    android:textColor="@color/colorNeonBlue"
+                    android:buttonTint="@color/colorNeonBlue" />
+
+                <RadioButton
+                    android:id="@+id/rbFemale"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/gender_female"
+                    android:textColor="@color/colorNeonBlue"
+                    android:buttonTint="@color/colorNeonBlue" />
+
+                <RadioButton
+                    android:id="@+id/rbOther"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/gender_other"
+                    android:textColor="@color/colorNeonBlue"
+                    android:buttonTint="@color/colorNeonBlue" />
+            </RadioGroup>
+
+            <!-- Optional email -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilSignupEmail"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:hint="@string/hint_email_optional"
+                app:boxStrokeColor="@color/neon_box_stroke"
+                app:boxStrokeWidth="1.5dp"
+                app:boxStrokeWidthFocused="2dp"
+                app:boxCornerRadiusTopStart="14dp"
+                app:boxCornerRadiusTopEnd="14dp"
+                app:boxCornerRadiusBottomStart="14dp"
+                app:boxCornerRadiusBottomEnd="14dp"
+                app:hintTextColor="@color/colorNeonBlue"
+                android:textColorHint="@color/colorNeonBlueLight"
+                app:placeholderTextColor="@color/colorNeonBlueLight"
+                app:startIconDrawable="@drawable/ic_email"
+                app:startIconTint="@color/colorNeonBlue">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etSignupEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/colorNeonBlue"
+                    android:textColorHint="@color/colorNeonBlueLight"
+                    android:background="@null"
+                    android:imeOptions="actionDone"
+                    android:singleLine="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSignup"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginTop="24dp"
+                android:text="@string/btn_create_account"
+                android:textColor="#070C20"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:backgroundTint="@color/colorNeonBlue"
+                app:cornerRadius="14dp"
+                style="@style/Widget.MaterialComponents.Button" />
+
+            <TextView
+                android:id="@+id/tvAlreadyHaveAccount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="24dp"
+                android:text="@string/already_have_account"
+                android:textColor="@color/colorNeonBlueLight"
+                android:textSize="14sp"
+                android:clickable="true"
+                android:focusable="true" />
+
+        </LinearLayout>
+
+        <!-- Global loading indicator with Neon Blue tint -->
+        <ProgressBar
+            android:id="@+id/progressLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:indeterminateTint="@color/colorNeonBlue"
+            android:visibility="gone" />
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,20 @@
+## This file is a configuration template for UMSify.
+## Copy this file as 'local.properties' in the root project folder.
+## DO NOT commit your actual 'local.properties' to Git!
+
+# Android SDK Location (configured automatically by Android Studio)
+# Windows example: sdk.dir=C\:\\Users\\<Username>\\AppData\\Local\\Android\\Sdk
+# macOS example:   sdk.dir=/Users/<Username>/Library/Android/sdk
+# Linux example:   sdk.dir=/home/<Username>/Android/Sdk
+sdk.dir=
+
+# -----------------------------------------------------------------------
+# UMSify Backend Configuration
+# -----------------------------------------------------------------------
+# Deployed Google Apps Script Web App URL:
+# Obtain this by deploying the script in backend/Code.gs as a Web App.
+# See backend/README.md for setup instructions.
+APPS_SCRIPT_URL=https://script.google.com/macros/s/YOUR_APPS_SCRIPT_DEPLOYMENT_ID/exec
+
+# Note: The Groq API key is stored securely inside Google Apps Script 
+# Script Properties (GROQ_API_KEY) and is never placed in the Android APK.

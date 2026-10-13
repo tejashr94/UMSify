@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">UMSify</string>
+    <string name="splash_tagline">Your LPU Portal, Simplified</string>
+
+    <!-- Error state strings -->
+    <string name="error_no_internet_title">No Connection</string>
+    <string name="error_no_internet_message">Please check your internet connection\nand try again.</string>
+    <string name="btn_retry">Try Again</string>
+
+    <!-- Content descriptions -->
+    <string name="cd_splash_logo">UMSify logo</string>
+
+    <!-- Auth screen -->
+    <string name="tab_login">Login</string>
+    <string name="tab_signup">Sign Up</string>
+    <string name="hint_username">Username</string>
+    <string name="hint_password">Password</string>
+    <string name="hint_full_name">Full Name</string>
+    <string name="hint_reg_number">Registration Number</string>
+    <string name="hint_confirm_password">Confirm Password</string>
+    <string name="hint_email_optional">Email (Optional)</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="create_account">Don\'t have an account? Sign Up</string>
+    <string name="already_have_account">Already have an account? Login</string>
+    <string name="btn_login">Login</string>
+    <string name="btn_create_account">Create Account</string>
+    <string name="label_gender">Gender</string>
+    <string name="gender_male">Male</string>
+    <string name="gender_female">Female</string>
+    <string name="gender_other">Other</string>
+
+    <!-- Home -->
+    <string name="nav_home">Home</string>
+    <string name="nav_timetable">Timetable</string>
+    <string name="nav_exams">Exams</string>
+    <string name="nav_ai">Document Import</string>
+    <string name="nav_profile">Profile</string>
+    <string name="current_class">CURRENT CLASS</string>
+    <string name="no_class_today">No classes scheduled today.</string>
+    <string name="all_classes_done">All classes finished for today 🎉</string>
+    <string name="holiday_title">🎉 HOLIDAY</string>
+    <string name="holiday_message">No classes today. Enjoy your day!</string>
+    <string name="upcoming_class">UPCOMING CLASS</string>
+    <string name="next_exam">NEXT EXAM</string>
+    <string name="today_timetable">Today\'s Schedule</string>
+    <string name="quick_actions">Quick Actions</string>
+    <string name="btn_my_timetable">My Timetable</string>
+    <string name="btn_exam_sheet">Exam Date Sheet</string>
+    <string name="btn_ai_import">Import Document</string>
+    <string name="btn_create_widget">Create Widget</string>
+    <string name="btn_my_profile">My Profile</string>
+
+    <!-- Timetable -->
+    <string name="label_room">Room: %s</string>
+    <string name="label_type">Type: %s</string>
+    <string name="label_current">CURRENT</string>
+    <string name="label_completed">COMPLETED</string>
+    <string name="label_upcoming">UPCOMING</string>
+
+    <!-- Exams -->
+    <string name="label_days_left">%d DAYS LEFT</string>
+    <string name="label_today">TODAY</string>
+    <string name="no_exams">No exams scheduled.</string>
+
+    <!-- Document Import -->
+    <string name="btn_upload_timetable">Upload Timetable</string>
+    <string name="btn_upload_exam">Upload Exam Date Sheet</string>
+    <string name="btn_take_photo">Take Photo</string>
+    <string name="btn_analyze_ai">Scan &amp; Extract</string>
+    <string name="ai_analyzing">Processing document…</string>
+    <string name="ai_complete">Extraction Complete ✓</string>
+    <string name="ai_failed">Unable to recognize document format. Please upload a clearer file.</string>
+    <string name="btn_try_again">Try Again</string>
+    <string name="btn_save_timetable">Save Timetable</string>
+    <string name="btn_save_exams">Save Exam Schedule</string>
+    <string name="btn_edit">Edit</string>
+    <string name="btn_cancel">Cancel</string>
+
+    <!-- Profile -->
+    <string name="btn_edit_profile">Edit Profile</string>
+    <string name="btn_sync">Sync Data</string>
+    <string name="btn_logout">Logout</string>
+    <string name="label_last_synced">Last synced: %s</string>
+    <string name="logout_confirm_title">Logout</string>
+    <string name="logout_confirm_message">Are you sure you want to logout?</string>
+    <string name="syncing">Syncing…</string>
+    <string name="sync_success">Data synced successfully ✓</string>
+    <string name="sync_failed">Sync failed. Please try again.</string>
+
+    <!-- Widget -->
+    <string name="widget_no_data">Open UMSify to load your timetable.</string>
+    <string name="widget_no_class">No class scheduled.</string>
+    <string name="widget_all_done">All done for today 🎉</string>
+</resources>
